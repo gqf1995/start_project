@@ -50,6 +50,7 @@ var Game=cc.Class({
             default: null,
             type: Player
         },
+        //得分label
         scoreDisplay: {
             default: null,
             type: cc.Label
