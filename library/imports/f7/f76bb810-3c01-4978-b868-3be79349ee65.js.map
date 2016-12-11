@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE;AACR,YAAI,EAAE;AACF,uBAAS,IAAI;AACb,gBAAI,EAAE,EAAE,CAAC,SAAS;SACrB;KACJ;;AAED,QAAI,EAAC,cAAC,IAAI,EAAE;AACR,YAAI,CAAC,IAAI,GAAG,IAAI,CAAC;AACjB,YAAI,CAAC,IAAI,CAAC,YAAY,CAAC,WAAW,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;KAClD;;AAED,WAAO,EAAC,mBAAG;AACP,YAAI,CAAC,IAAI,CAAC,cAAc,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;KACvC;;AAED,QAAI,EAAE,gBAAY;;AAEd,YAAI,CAAC,IAAI,CAAC,IAAI,CAAC,WAAW,CAAC,CAAC;KAC/B;CACJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\n    extends: cc.Component,\n\n    properties: {\n        anim: {\n            default: null,\n            type: cc.Animation\n        }\n    },\n\n    init (game) {\n        this.game = game;\n        this.anim.getComponent('ScoreAnim').init(this);\n    },\n\n    despawn () {\n        this.game.despawnScoreFX(this.node);\n    },\n\n    play: function () {\n        //播放帧动画\n        this.anim.play('score_pop');\n    }\n});"
+  ]
+}
